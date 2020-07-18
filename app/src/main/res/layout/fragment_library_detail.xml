@@ -14,32 +14,55 @@
         android:layout_height="match_parent">
 
         <View
-            android:id="@+id/main_app_bar"
+            android:id="@+id/detail_app_bar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorAccent"
+            android:background="@color/colorAzure"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/colorWhite"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="123"
+            android:text="시험공부 도서관"
             android:textSize="16dp"
-            app:layout_constraintBottom_toBottomOf="@id/main_app_bar"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="@id/detail_app_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/main_app_bar" />
+            app:layout_constraintTop_toTopOf="@id/detail_app_bar" />
+
+        <View
+            android:id="@+id/detail_sub_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@color/colorVeryLightPink"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:paddingHorizontal="16dp"
-            android:paddingTop="?attr/actionBarSize">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_sub_app_bar"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <View
-                android:id="@+id/main_hangout_box"
+                android:id="@+id/detail_hangout_box"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:layout_marginTop="42dp"
@@ -49,14 +72,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/main_recycler_view"
+                android:id="@+id/detail_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="26dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/main_hangout_box" />
+                app:layout_constraintTop_toBottomOf="@+id/detail_hangout_box" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

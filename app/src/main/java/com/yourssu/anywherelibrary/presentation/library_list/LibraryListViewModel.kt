@@ -35,6 +35,7 @@ class LibraryListViewModel(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 libraries = it.libraries
+                libraries.add(SimpleLibrary("", 0, "도서관 추가", null, null, 0))
                 getListCall.call()
             }, {
                 Log.d("MyTag", it.localizedMessage)

@@ -8,8 +8,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.yourssu.anywherelibrary.R
 import com.yourssu.anywherelibrary.databinding.FragmentLibraryListMainBinding
 import com.yourssu.anywherelibrary.domain.entity.SimpleLibrary
@@ -33,8 +33,8 @@ class LibraryListFragment: Fragment() {
     }
 
     private fun setAdapter(libraryList : ArrayList<SimpleLibrary>) {
-        with(main_recycler_view) {
-            adapter = LibraryListAdapter(libraryList)
+        with(detail_recycler_view) {
+            adapter = LibraryListAdapter(libraryList, this@LibraryListFragment)
             layoutManager = GridLayoutManager(context,3)
         }
     }
@@ -56,5 +56,13 @@ class LibraryListFragment: Fragment() {
         viewModel =
             ViewModelProviders.of(this).get(LibraryListViewModel::class.java)
         binding.viewModel = viewModel
+    }
+
+    fun startDetailFragment() {
+        findNavController().navigate(R.id.action_libraryListFragment_to_libraryDetailFragment)
+    }
+
+    fun startPostFragment() {
+        findNavController().navigate(R.id.action_libraryListFragment_to_libraryPostFragment)
     }
 }
