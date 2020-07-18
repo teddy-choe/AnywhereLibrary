@@ -5,10 +5,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <View
+        android:layout_width="64dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_library"
+        android:backgroundTint="@color/colorLightBlue"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="@+id/detail_rect"
+        app:layout_constraintEnd_toEndOf="@+id/detail_rect"
+        app:layout_constraintBottom_toBottomOf="@id/detail_rect"/>
+
+    <View
         android:id="@+id/detail_rect"
         android:layout_width="104dp"
-        android:layout_height="104dp"
-        android:background="@color/colorAccent"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_library"
+        android:backgroundTint="@color/colorAzure"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -18,9 +30,10 @@
         android:layout_height="wrap_content"
         android:text="123"
         android:textSize="12dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintTop_toTopOf="@id/detail_rect"
-        app:layout_constraintStart_toStartOf="@id/detail_rect" />
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@id/detail_rect"
+        app:layout_constraintStart_toStartOf="@id/detail_rect"
+        app:layout_constraintEnd_toEndOf="@id/detail_rect"/>
 
     <TextView
         android:id="@+id/detail_time"

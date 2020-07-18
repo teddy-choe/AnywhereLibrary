@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/library_navigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/library_navigation"
+    app:startDestination="@id/libraryListFragment">
 
+    <fragment
+        android:id="@+id/libraryListFragment"
+        android:name="com.yourssu.anywherelibrary.presentation.library_list.LibraryListFragment"
+        android:label="LibraryListFragment" >
+        <action
+            android:id="@+id/action_libraryListFragment_to_libraryPostFragment"
+            app:destination="@id/libraryPostFragment" />
+        <action
+            android:id="@+id/action_libraryListFragment_to_libraryDetailFragment"
+            app:destination="@id/libraryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/libraryDetailFragment"
+        android:name="com.yourssu.anywherelibrary.presentation.library_list.LibraryDetailFragment"
+        android:label="LibraryDetailFragment" />
+    <fragment
+        android:id="@+id/libraryPostFragment"
+        android:name="com.yourssu.anywherelibrary.presentation.library_list.LibraryPostFragment"
+        android:label="LibraryPostFragment" />
 </navigation>
