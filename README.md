@@ -24,10 +24,10 @@ ViewModel - Store UI-related data that isn't destroyed on app rotations. Easily 
 
 ### 📷 Screenshots
 
-![image1](./image/1.png)
+<img src="./image/1.png" alt="image1" style="zoom:33%;" />
 
-![image2](./image/2.png)
+<img src="./image/2.png" alt="image2" style="zoom:33%;" />
 
-![image3](./image/3.png)
+<img src="./image/3.png" alt="image3" style="zoom:33%;" />
 
-![image4](./image/4.png)
+<img src="./image/4.png" alt="image4" style="zoom:33%;" />
