@@ -24,13 +24,10 @@ ViewModel - Store UI-related data that isn't destroyed on app rotations. Easily 
 
 ### 📷 Screenshots
 
-<img src="/Users/macbook/Desktop/스크린샷 2020-07-19 오후 8.20.27.png" alt="스크린샷 2020-07-19 오후 8.20.27" style="zoom:33%;" />
+![image1](./image/1.png)
 
+![image2](./image/2.png)
 
+![image3](./image/3.png)
 
-<img src="/Users/macbook/Desktop/스크린샷 2020-07-19 오후 8.21.03.png" alt="스크린샷 2020-07-19 오후 8.21.03" style="zoom:33%;" />
-
-<img src="/Users/macbook/Desktop/스크린샷 2020-07-19 오후 8.21.09.png" alt="스크린샷 2020-07-19 오후 8.21.09" style="zoom:33%;" />
-
-<img src="/Users/macbook/Desktop/스크린샷 2020-07-19 오후 8.21.24.png" alt="스크린샷 2020-07-19 오후 8.21.24" style="zoom:33%;" />
-
+![image4](./image/4.png)
