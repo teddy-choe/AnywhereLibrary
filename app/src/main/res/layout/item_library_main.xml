@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.yourssu.anywherelibrary.presentation.library_list.LibraryListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_circle"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:layout_constraintBottom_toBottomOf="@id/item_circle"
+            app:layout_constraintEnd_toEndOf="@+id/item_circle" />
+
+        <TextView
+            android:id="@+id/item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="123"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@id/item_circle"
+            app:layout_constraintStart_toStartOf="@id/item_circle"
+            app:layout_constraintTop_toBottomOf="@id/item_circle" />
+
+        <TextView
+            android:id="@+id/item_locate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="123"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="@id/item_circle"
+            app:layout_constraintStart_toStartOf="@id/item_circle"
+            app:layout_constraintTop_toBottomOf="@id/item_count" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
