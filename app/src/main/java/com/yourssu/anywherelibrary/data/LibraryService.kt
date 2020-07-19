@@ -3,6 +3,7 @@ package com.yourssu.anywherelibrary.data
 import com.yourssu.anywherelibrary.data.model.CreateLibraryRequest
 import com.yourssu.anywherelibrary.data.model.GetLibraryResponse
 import com.yourssu.anywherelibrary.data.model.SearchLibrariesResponse
+import com.yourssu.anywherelibrary.data.model.UniversityRankResponse
 import io.reactivex.Single
 import retrofit2.http.*
 
@@ -18,4 +19,7 @@ interface LibraryService {
     fun postLibrary(@Header("accessToken") accessToken : String,
                     @Body createLibraryRequest : CreateLibraryRequest
     ) : Single<GetLibraryResponse>
+
+    @GET("/v1/api/libraries/library/ranks/university")
+    fun getRankingList() : Single<UniversityRankResponse>
 }

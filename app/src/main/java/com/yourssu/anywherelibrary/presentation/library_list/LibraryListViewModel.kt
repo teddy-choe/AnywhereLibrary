@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.yourssu.anywherelibrary.domain.entity.SimpleLibrary
+import com.yourssu.anywherelibrary.domain.entity.UniversityRanking
 import com.yourssu.anywherelibrary.domain.usecase.GetLibrariesUsecase
 import com.yourssu.anywherelibrary.util.SingleLiveEvent
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -22,7 +23,9 @@ class LibraryListViewModel(
         get() = _size
 
     var libraries = ArrayList<SimpleLibrary>()
+    var rakingList = ArrayList<UniversityRanking>()
     val getListCall : SingleLiveEvent<Void> = SingleLiveEvent()
+    val getRankingListCall : SingleLiveEvent<Void> = SingleLiveEvent()
 
     init {
         _currentPage.value = 0
@@ -37,6 +40,18 @@ class LibraryListViewModel(
                 libraries = it.libraries
                 libraries.add(SimpleLibrary("", 0, "도서관 추가", null, null, 0))
                 getListCall.call()
+            }, {
+                Log.d("MyTag", it.localizedMessage)
+            })
+    }
+
+    fun getRankingList() {
+        getLibrariesUsecase.getRankingList()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                rakingList = it.ranks
+                getRankingListCall.call()
             }, {
                 Log.d("MyTag", it.localizedMessage)
             })

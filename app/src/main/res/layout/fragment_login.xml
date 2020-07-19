@@ -13,6 +13,15 @@
         android:layout_height="match_parent"
         android:paddingHorizontal="52dp">
 
+        <ImageView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <EditText
             android:id="@+id/login_et_id"
             android:layout_width="0dp"
@@ -43,14 +52,17 @@
             android:id="@+id/login_submit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingVertical="14dp"
-            android:text="Button"
+            android:paddingVertical="18dp"
+            android:text="로그인"
             android:textSize="14dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/bg_library"
+            android:backgroundTint="@color/colorAzure"
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.4" />
+            app:layout_constraintVertical_bias="0.3" />
 
         <TextView
             android:id="@+id/login_to_signup"

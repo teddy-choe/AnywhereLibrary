@@ -9,10 +9,14 @@
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_library_navigation"
-            app:destination="@id/library_navigation" />
+            app:destination="@id/library_navigation"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:popUpTo="@id/library_navigation"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
-            app:destination="@id/signupFragment" />
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
@@ -20,7 +24,9 @@
         android:label="SignupFragment" >
         <action
             android:id="@+id/action_signupFragment_to_library_navigation"
-            app:destination="@id/library_navigation" />
+            app:destination="@id/library_navigation"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:popUpToInclusive="false" />
     </fragment>
     <include app:graph="@navigation/library_navigation" />
 </navigation>

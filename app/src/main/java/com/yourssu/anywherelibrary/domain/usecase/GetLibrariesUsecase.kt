@@ -2,6 +2,7 @@ package com.yourssu.anywherelibrary.domain.usecase
 
 import com.yourssu.anywherelibrary.data.LibraryService
 import com.yourssu.anywherelibrary.data.model.SearchLibrariesResponse
+import com.yourssu.anywherelibrary.data.model.UniversityRankResponse
 import com.yourssu.anywherelibrary.util.RetrofitManager
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -12,6 +13,12 @@ class GetLibrariesUsecase {
 
     fun getLibraries(currentPage : Int ,size : Int) : Single<SearchLibrariesResponse> {
         return libraryService.searchLibrary(currentPage, size)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+    }
+
+    fun getRankingList() : Single<UniversityRankResponse> {
+        return libraryService.getRankingList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
     }

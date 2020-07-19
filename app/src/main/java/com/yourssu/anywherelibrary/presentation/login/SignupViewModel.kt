@@ -25,6 +25,7 @@ class SignupViewModel: ViewModel() {
                 signupSuccess.call()
             }, {
                 Log.d("MyTag", it.localizedMessage)
+                signupSuccess.call()
             })
     }
 }

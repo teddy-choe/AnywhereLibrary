@@ -39,7 +39,7 @@ class SignupFragment : Fragment() {
 
     private fun setLiveDataObserver() {
         signupViewModel.signupSuccess.observe(this, Observer {
-            findNavController().navigate(R.id.action_loginFragment_to_library_navigation)
+            findNavController().navigate(R.id.action_signupFragment_to_library_navigation)
         })
     }
 

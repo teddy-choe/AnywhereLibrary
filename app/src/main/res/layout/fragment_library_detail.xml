@@ -23,6 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/detail_ic_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_arrow_back_black_24dp"
@@ -61,14 +62,18 @@
             app:layout_constraintTop_toBottomOf="@+id/detail_sub_app_bar"
             app:layout_constraintBottom_toBottomOf="parent">
 
-            <View
+            <TextView
                 android:id="@+id/detail_hangout_box"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="42dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/bg_hangout"
+                android:text="행아웃 링크"
+                android:textColor="@color/colorWhite"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="12dp"
                 android:visibility="gone"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView

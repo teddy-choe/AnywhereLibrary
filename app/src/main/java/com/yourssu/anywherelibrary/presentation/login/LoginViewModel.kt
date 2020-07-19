@@ -22,6 +22,7 @@ class LoginViewModel : ViewModel() {
             .subscribe({
                 SharedPreferenceManager.setPref(ConstValue.CONST_ACCESS_TOKEN, it.accessToken.token)
                 SharedPreferenceManager.setPref(ConstValue.CONST_USER_ID, it.simpleUser.id)
+                SharedPreferenceManager.setPref(ConstValue.CONST_USER_NICKNAME, it.simpleUser.nickname)
                 loginSuccess.call()
             }, {
                 Log.d("MyTag", it.localizedMessage)
