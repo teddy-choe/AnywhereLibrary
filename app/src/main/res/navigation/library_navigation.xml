@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/library_navigation"
+    app:startDestination="@id/libraryListFragment">
+
+    <fragment
+        android:id="@+id/libraryListFragment"
+        android:name="com.yourssu.anywherelibrary.presentation.library_list.LibraryListFragment"
+        android:label="LibraryListFragment" >
+        <action
+            android:id="@+id/action_libraryListFragment_to_libraryPostFragment"
+            app:destination="@id/libraryPostFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+        <action
+            android:id="@+id/action_libraryListFragment_to_libraryDetailFragment"
+            app:destination="@id/libraryDetailFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/libraryDetailFragment"
+        android:name="com.yourssu.anywherelibrary.presentation.library_list.LibraryDetailFragment"
+        android:label="LibraryDetailFragment" >
+        <action
+            android:id="@+id/action_libraryDetailFragment_to_libraryListFragment"
+            app:destination="@id/libraryListFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+        <action
+            android:id="@+id/action_libraryDetailFragment_to_seatFragment"
+            app:destination="@id/seatFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/libraryPostFragment"
+        android:name="com.yourssu.anywherelibrary.presentation.library_list.LibraryPostFragment"
+        android:label="LibraryPostFragment" >
+        <action
+            android:id="@+id/action_libraryPostFragment_to_libraryListFragment"
+            app:destination="@id/libraryListFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/seatFragment"
+        android:name="com.yourssu.anywherelibrary.presentation.library_list.SeatFragment"
+        android:label="SeatFragment" >
+        <action
+            android:id="@+id/action_seatFragment_to_libraryDetailFragment"
+            app:destination="@id/libraryDetailFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+    </fragment>
+</navigation>
